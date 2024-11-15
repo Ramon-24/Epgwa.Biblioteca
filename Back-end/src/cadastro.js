@@ -19,3 +19,20 @@ cad_router.post("/cadastro", (req, res) => {
             });
         });
 });
+
+cad_router.get("/list-user", (req, res) => {
+    conn.query("select * from alunos", (err, result) => {
+        if(err) {
+            return res.json({
+                Erro: "Erro ao consultar os dados dos alunos" + err.message
+            });
+        };
+        res.json(result)
+
+        result.map((item) => {
+            console.log(item.nome)
+        })
+    });
+});
+
+export {cad_router};
