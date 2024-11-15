@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "Ramon, Naiara e Laryanne",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mysql": "^2.18.1"
+  }
 }
