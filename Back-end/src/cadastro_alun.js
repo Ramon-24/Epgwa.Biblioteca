@@ -4,7 +4,7 @@ import {conn} from "./bd.js";
 const cad_router = Router()
 
 // Cadastro do aluno que acabou de entrar na escola 
-cad_router.post("/cadastro", (req, res) => {
+cad_router.post("/cad_aluno", (req, res) => {
     const { nome, endereco, telefone, curso, ano, serie } = req.body;
 
     conn.query(`INSERT INTO alunos (nome, endereco, telefone, curso, ano, serie) 
