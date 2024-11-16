@@ -29,7 +29,25 @@ put_router.get("/atualizar_serie", (req, res) => {
                 res.json({
                     Deletado: `Aluno foi deletado com sucesso!`
                 });
-            });  // Atualização da serie dos alunos restantes
+
+            }); 
+
+             // deletar de alunos que não podem ser monitores por estarem na 3 serie
+             // Perguntar pro professor se pode reutilizar a rota
+        } else if (registro.serie === 3) {
+            conn.query(`DELETE FROM momitores WHERE id = '${registro.id}'`, (err, result) => {
+                if(err) {
+                    return res.json({
+                        Deletar: "Os ex-monitores não foram deletados com sucesso!" + err.message
+                    });
+                };
+                res.json({
+                    Deletado: `Aluno que era monitor foi deletado da tabela de monitores!`
+                });
+
+            });
+
+              // Atualização da serie dos alunos restantes
         } else if (registro.ano < ano_atual) {
             const diferenca = ano_atual - registro.ano;
             

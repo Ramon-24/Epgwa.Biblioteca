@@ -1,6 +1,5 @@
 import { Router } from "express";
 import {conn} from "./bd.js";
-// Pode ocorrer um erro com a importação do conn
 
 const cad_router = Router()
 
@@ -8,7 +7,7 @@ const cad_router = Router()
 cad_router.post("/cadastro", (req, res) => {
     const { nome, endereco, telefone, curso, ano, serie } = req.body;
 
-    conn.query(`insert into alunos (nome, endereco, telefone, curso, ano, serie) 
+    conn.query(`INSERT INTO alunos (nome, endereco, telefone, curso, ano, serie) 
         values ('${nome}', '${endereco}', '${telefone}', '${curso}', '${ano}', '${serie}')`, (err, result) => {
             if(err) {
                 return res.json({
@@ -25,7 +24,7 @@ cad_router.post("/cadastro", (req, res) => {
 
 
 cad_router.get("/list-user", (req, res) => {
-    conn.query("select * from alunos", (err, result) => {
+    conn.query("SELECT * FROM alunos", (err, result) => {
         if(err) {
             return res.json({
                 Erro: "Erro ao consultar os dados dos alunos" + err.message
