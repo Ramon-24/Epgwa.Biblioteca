@@ -32,3 +32,5 @@ log_router.post("/login", (req, res) => {
 
     });
 });
+
+export {log_router};

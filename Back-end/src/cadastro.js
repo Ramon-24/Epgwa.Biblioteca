@@ -4,6 +4,7 @@ import {conn} from "./bd.js";
 
 const cad_router = Router()
 
+// Cadastro do aluno que acabou de entrar na escola 
 cad_router.post("/cadastro", (req, res) => {
     const { nome, endereco, telefone, curso, ano, serie } = req.body;
 
@@ -19,6 +20,9 @@ cad_router.post("/cadastro", (req, res) => {
             });
         });
 });
+
+
+
 
 cad_router.get("/list-user", (req, res) => {
     conn.query("select * from alunos", (err, result) => {
