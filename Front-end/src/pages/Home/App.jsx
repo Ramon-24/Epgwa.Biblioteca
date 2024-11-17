@@ -1,11 +1,16 @@
-import './App.css'
+
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
 
   return (
-      <div> 
-        <h1>Olá mundo do React</h1>
-      </div>
+    <BrowserRouter>
+      <Routes>
+        <Route>
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 
 }
