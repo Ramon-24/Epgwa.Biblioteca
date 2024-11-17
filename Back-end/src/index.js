@@ -16,6 +16,11 @@ app.use("/cad_monit", mont_router);
 app.use("/cad_livro", liv_router);
 app.use("/emprestimos", empr_router);
 
+
+app.get("/", (req, res) => {
+    res.send("O servidor EP Biblioteca, está rodando!")
+})
+
 app.listen(3000, (req, res) => {
     console.log("O servidor Ep Biblioteca está finalmente rodando sem erros!!!!")
 });

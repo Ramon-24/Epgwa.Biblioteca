@@ -15,4 +15,4 @@ conn.connect((err) => {
     console.log("Conexão bem sucedida ao BD")
 });
 
-export {conn} //.
+export {conn} 

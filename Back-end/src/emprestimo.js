@@ -14,7 +14,8 @@ empr_router.post("/emprestimos", (req, res) => {
         });
     }
 
-    conn.query(`SELECT id FROM alunos WHERE id = '${aluno_id}'`, (err, result) => {
+
+    conn.query(`SELECT Id FROM alunos WHERE Id = '${aluno_id}'`, (err, result) => {
         if (err) {
             return res.json({
                  Erro: "Erro no BD ao verificar aluno!" + err.message
@@ -77,7 +78,10 @@ empr_router.post("/emprestimos", (req, res) => {
 
 
 
-empr_router.delete("/emprestimos/devolucao", (req, res) => {
+
+
+
+empr_router.delete("/emprestimos/devolucao_delet", (req, res) => {
     const { nome, curso, serie, livro_tombo } = req.body;
 
     if (nome == " " || curso == " " || serie == " " || livro_tombo == " ") {
@@ -86,7 +90,7 @@ empr_router.delete("/emprestimos/devolucao", (req, res) => {
         });
     }
 
-    conn.query(`SELECT id FROM alunos WHERE nome = '${nome}' AND curso = '${curso}' AND serie = '${serie}'`, (err, result) => {
+    conn.query(`SELECT Id FROM alunos WHERE Nome = '${nome}' AND Curso = '${curso}' AND Serie = '${serie}'`, (err, result) => {
         if (err) {
             return res.json({
                  Erro: "Erro no Bd na verificação do aluno!" + err.message

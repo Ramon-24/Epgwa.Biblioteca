@@ -11,24 +11,23 @@ log_router.post("/login", (req, res) => {
         });
     };
 
-    const verificar = `SELECT * FROM alunos WHERE nome = '${nome}' AND curso = '${curso}' AND serie = '${serie}'`;
-    conn.query(verificar, (err, result) => {
+    conn.query(`SELECT * FROM alunos WHERE Nome = '${nome}' AND Curso = '${curso}' AND Serie = '${serie}'`, (err, result) => {
         if (err) {
             return res.json({
                 Erro: "Erro ao acessar o BD" + err.message
             });
         };
 
-        if (results.length > 0) {
-            return res.json({
-                Sucesso: "Usuário encontrado!",
-                Dados: results[0] 
-            });
-        } else {
-            return res.json({
-                Erro: "Usuário não encontrado!"
-            });
-        }
+        // if (result.length > 0) {
+        //     return res.json({
+        //         Sucesso: "Usuário encontrado!",
+        //         Dados: result[0] 
+        //     });
+        // } else {
+        //     return res.json({
+        //         Erro: "Usuário não encontrado!"
+        //     });
+        // };
 
     });
 });
