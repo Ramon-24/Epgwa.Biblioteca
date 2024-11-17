@@ -3,8 +3,8 @@ import mysql from "mysql";
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "",
-    database: "ep biblioteca"
+    password: "", //.
+    database: "ep biblioteca" //.
 });
 
 conn.connect((err) => {
@@ -15,4 +15,4 @@ conn.connect((err) => {
     console.log("Conexão bem sucedida ao BD")
 });
 
-export {conn}
+export {conn} //.

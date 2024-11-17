@@ -1,5 +1,7 @@
 import { Router } from "express";
-import { conn } from "./bd";
+// import { conn } from "./bd";  Importado errado o Bd
+import { conn } from "./bd.js";
+
 
 const empr_router = Router();
 
@@ -12,41 +14,41 @@ empr_router.post("/emprestimos", (req, res) => {
         });
     }
 
-    conn.query(`SELECT id FROM alunos WHERE id = '${aluno_id}'`, (err, results) => {
+    conn.query(`SELECT id FROM alunos WHERE id = '${aluno_id}'`, (err, result) => {
         if (err) {
             return res.json({
                  Erro: "Erro no BD ao verificar aluno!" + err.message
                 });
         }
 
-        // if (results.length === 0) {
+        // if (result.length === 0) {
         //     return res.json({ 
         //         Erro: "Aluno não encontrado!" 
         //     });
         // }
 
 
-        conn.query(`SELECT * FROM emprestimos WHERE Aluno_id = '${aluno_id}' AND Status = 'Emprestado'`, (err, results) => {
+        conn.query(`SELECT * FROM emprestimos WHERE Aluno_id = '${aluno_id}' AND Status = 'Emprestado'`, (err, result) => {
             if (err) {
                 return res.json({ 
                     Erro: "Erro no banco de dados ao verificar empréstimos!" + err.message
                 });
             }
 
-            // if (results.length > 0) {
+            // if (result.length > 0) {
             //     return res.json({
             //         Erro: "Este aluno já possui um empréstimo ativo!"
             //     });
             // }
 
-            conn.query(`SELECT * FROM emprestimos WHERE Livro_tombo = '${livro_tombo}' AND Status = 'Emprestado'`, (err, emprestimosLivro) => {
+            conn.query(`SELECT * FROM emprestimos WHERE Livro_tombo = '${livro_tombo}' AND Status = 'Emprestado'`, (err, result) => {
                 if (err) {
                     return res.json({ 
                         Erro: "Erro no banco de dados ao verificar status do livro!" + err.message
                     });
                 }
 
-                // if (emprestimosLivro.length > 0) {
+                // if (result.length > 0) {
                 //     return res.json({
                 //         Erro: "Este livro já está emprestado!"
                 //     });
