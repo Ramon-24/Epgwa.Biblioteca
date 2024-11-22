@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {conn} from "./bd.js";
+import { conn } from "./bd.js";
 
 const cad_router = Router()
 
@@ -9,15 +9,15 @@ cad_router.post("/cad_aluno", (req, res) => {
 
     conn.query(`INSERT INTO alunos (Nome, Endereco, Telefone, Curso, Ano, Serie) 
         values ('${Nome}', '${Endereco}', '${Telefone}', '${Curso}', '${Ano}', '${Serie}')`, (err, result) => {
-            if(err) {
-                return res.json({
-                    Erro: "Erro no cadastro do aluno" + err.message
-                });
-            };
-            res.json({
-                Sucesso: `O cadastro do aluno(a), ${Nome} foi efetuado com sucesso!`
+        if (err) {
+            return res.json({
+                Erro: "Erro no cadastro do aluno" + err.message
             });
+        };
+        res.json({
+            Sucesso: `O cadastro do aluno(a), ${Nome} foi efetuado com sucesso!`
         });
+    });
 });
 
 
@@ -39,4 +39,4 @@ cad_router.post("/cad_aluno", (req, res) => {
 //     });
 // });
 
-export {cad_router};
+export { cad_router };

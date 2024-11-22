@@ -1,5 +1,4 @@
 import { Router } from "express";
-// import { conn } from "./bd";  Importado errado o Bd
 import { conn } from "./bd.js";
 
 
@@ -22,11 +21,11 @@ empr_router.post("/emprestimos", (req, res) => {
                 });
         }
 
-        // if (result.length === 0) {
-        //     return res.json({ 
-        //         Erro: "Aluno não encontrado!" 
-        //     });
-        // }
+        if (result.length === 0) {
+            return res.json({ 
+                Erro: "Aluno não encontrado!" 
+            });
+        }
 
 
         conn.query(`SELECT * FROM emprestimos WHERE Aluno_id = '${aluno_id}' AND Status = 'Emprestado'`, (err, result) => {
@@ -36,11 +35,11 @@ empr_router.post("/emprestimos", (req, res) => {
                 });
             }
 
-            // if (result.length > 0) {
-            //     return res.json({
-            //         Erro: "Este aluno já possui um empréstimo ativo!"
-            //     });
-            // }
+            if (result.length > 0) {
+                return res.json({
+                    Erro: "Este aluno já possui um empréstimo ativo!"
+                });
+            }
 
             conn.query(`SELECT * FROM emprestimos WHERE Livro_tombo = '${livro_tombo}' AND Status = 'Emprestado'`, (err, result) => {
                 if (err) {
@@ -49,11 +48,11 @@ empr_router.post("/emprestimos", (req, res) => {
                     });
                 }
 
-                // if (result.length > 0) {
-                //     return res.json({
-                //         Erro: "Este livro já está emprestado!"
-                //     });
-                // }
+                if (result.length > 0) {
+                    return res.json({
+                        Erro: "Este livro já está emprestado!"
+                    });
+                }
 
 
                 const status = "Emprestado";
@@ -96,11 +95,11 @@ empr_router.delete("/emprestimos/devolucao_delet", (req, res) => {
                  Erro: "Erro no Bd na verificação do aluno!" + err.message
             });
         }
-        // if (result.length === 0) {
-        //     return res.json({ 
-        //         Erro: "Aluno não encontrado!" 
-        //     });
-        // }
+        if (result.length === 0) {
+            return res.json({ 
+                Erro: "Aluno não encontrado!" 
+            });
+        }
 
         const alunoId = result[0].id;
 
@@ -110,11 +109,11 @@ empr_router.delete("/emprestimos/devolucao_delet", (req, res) => {
                     Erro: "BD não consegue verificar livro!" + err.message
                 });
             }
-            // if (result.length === 0) {
-            //     return res.json({
-            //         Erro: "Livro não encontrado!" 
-            //     });
-            // }
+            if (result.length === 0) {
+                return res.json({
+                    Erro: "Livro não encontrado!" 
+                });
+            }
 
             conn.query(`SELECT Id FROM emprestimos WHERE Aluno_id = '${alunoId}' AND Livro_tombo = '${livro_tombo}' AND Status = 'Emprestado'`, (err, result) => {
                 if (err) {
@@ -122,11 +121,11 @@ empr_router.delete("/emprestimos/devolucao_delet", (req, res) => {
                         Erro: "BD não consegue verificar o empréstimo!" + err.message
                     });
                 }
-                // if (result.length === 0) {
-                //     return res.json({
-                //         Erro: "Empréstimo ativo não encontrado!" 
-                //     });
-                // }
+                if (result.length === 0) {
+                    return res.json({
+                        Erro: "Empréstimo ativo não encontrado!" 
+                    });
+                }
 
                 const emprestimoId = result[0].Id;
 
@@ -144,8 +143,6 @@ empr_router.delete("/emprestimos/devolucao_delet", (req, res) => {
         });
     });
 });
-
-
 
 
 export {empr_router};

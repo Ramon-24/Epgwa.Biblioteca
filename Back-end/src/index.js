@@ -9,12 +9,12 @@ import { empr_router } from "./emprestimo.js";
 
 const app = express();
 app.use(express.json());
-app.use("/cad_aluno", cad_router);
-app.use("/login", log_router);
-app.use("/atualizar_serie", put_router);
-app.use("/cad_monit", mont_router);
-app.use("/cad_livro", liv_router);
-app.use("/emprestimos", empr_router);
+app.use(cad_router);
+app.use(log_router);
+app.use(put_router);
+app.use(mont_router);
+app.use(liv_router);
+app.use(empr_router);
 
 
 app.get("/", (req, res) => {
