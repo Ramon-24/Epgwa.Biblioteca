@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.area-header{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fbead4;
+    /* border-radius: 20px; */
+    /* margin-left: 25px; */
+    /* margin-bottom: 90px; */
+}
+.area-cadastro{
+    background-color: #3b9140;
+    width: 38vw;
+    height: 93vh;
+    border-radius: 10px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.area-login{
+    background-color: #fff;
+    width: 58vw;
+    height: 93vh;
+    margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.area-button{
+    width: 12vw;
+    height: 5vh;
+    margin-top: 400px;
+    border-radius: 20px;
+
+}
