@@ -1,24 +1,26 @@
 import './style.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cadastro() {
+    const navigate = useNavigate();
     return (
         <div>
             <header className='area-header'>
-                <section className='area-cadastro'>
+                <section className='area-de-cadastro'>
                     <h2 className='text-titles'>Venha login aqui</h2>
                     <h4 className='sub-text'>Faça seu login no site, e entre em sua conta Ep</h4>
-                    <button className='area-button'>Login-se</button>
+                    <button className='area-button' onClick={()=>navigate('/')}>Login-se</button>
                 </section>
-                <section className='area-login'>
+                <section className='area-de-login'>
                     <h1 className='text-title'>Cadastre-se</h1>
                     <h4 className='sub-texts'>Faça o cadastro no site de emprestimos da Ep biblioteca</h4>
-                    <input className='text-cad' name='Nome' type="text" />
-                    <input className='text-cad' name='Endereco' type="text" />
-                    <input className='text-cad' name='Telefone' type="text" />
-                    <input className='text-cad' name='Curso' type="text" />
-                    <input className='text-cad' name='Ano' type="text" />
-                    <input className='text-cad' name='Serie' type="text" />
-                    <button className='area-buttons'>Cadastrar</button>
+                    <input className='text-cad' placeholder='Nome' type="text" />
+                    <input className='text-cad' placeholder='Endereco' type="text" />
+                    <input className='text-cad' placeholder='Telefone' type="text" />
+                    <input className='text-cad' placeholder='Curso' type="text" />
+                    <input className='text-cad' placeholder='Ano' type="text" />
+                    <input className='text-cad' placeholder='Serie' type="text" />
+                    <button className='button' onClick={()=>navigate('/home')} >Cadastrar</button>
                 </section>
             </header>
         </div>

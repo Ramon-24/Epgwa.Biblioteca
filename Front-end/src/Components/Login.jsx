@@ -1,21 +1,24 @@
 import './style.css';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Login() {
+    const navigate = useNavigate();
     return (
         <div>
             <header className='area-header'>
                 <section className='area-cadastro'>
                     <h2 className='text-titles'>Cadastre-se aqui</h2>
                     <h4 className='sub-text'>Faça seu cadastrono site, e venha ser aluno da Ep</h4>
-                    <button className='area-button'>Cadastre-se</button>
+                    <button className='area-button' onClick={()=>navigate('/cad_aluno')}> Cadastre-se</button>
                 </section>
                 <section className='area-login'>
                     <h1 className='text-title'>Login</h1>
                     <h4 className='sub-texts'>Faça seu login no site de emprestimos da Ep biblioteca</h4>
-                    <input className='area-text' name='Nome' type="text" />
-                    <input className='area-text' name='Curso' type="text" />
-                    <input className='area-text' name='Serie' type="text" />
-                    <button className='area-buttons'>Fazer login</button>
+                    <input className='area-text' placeholder='Nome' type="text" />
+                    <input className='area-text' placeholder='Curso' type="text" />
+                    <input className='area-text' placeholder='Serie' type="text" />
+                    <button className='area-buttons' onClick={()=>navigate('/home')}>Fazer login</button>
                 </section>
             </header>
         </div>

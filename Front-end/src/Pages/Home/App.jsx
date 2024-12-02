@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import api from '../../Services/api';
 // import { Login } from '../../Components/Login.jsx';
 
-function App() {
+export default function App() {
   async function concBack() {
     conect = await api.get('/')
   };
@@ -18,6 +18,4 @@ function App() {
   //   </Routes>
   //   </BrowserRouter>
   // )
-}
-
-export default App
+};

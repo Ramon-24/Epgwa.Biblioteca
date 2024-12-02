@@ -23,12 +23,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    animation: troca 3s;
 }
 .area-login{
     background-color: #fff;
     width: 58vw;
     height: 93vh;
     margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.area-de-cadastro{
+    background-color: #3b9140;
+    width: 38vw;
+    height: 93vh;
+    border-radius: 10px;
+    margin-left: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    animation: troca 3s;
+}
+.area-de-login{
+    background-color: #fff;
+    width: 58vw;
+    height: 93vh;
+    margin-left: -2400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,27 +76,39 @@
     color: #333332;
     /* background-color: #3b9140; */
 }
+.button{
+    width: 12vw;
+    height: 6vh;
+    margin-top: 20px;
+    border-radius: 20px;
+    border-color: #333332;
+    color: #333332;
+}
 .area-text{
     width: 26vw;
     height: 6vh;
     border-radius: 15px;
     /* border-color: #fff; */
-    background-color: #e4e1e0;
+    background-color: #d7d5d4;
     outline: none;
     /* margin-bottom: 15px; */
     margin-top: 20px;
     border: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
 }
 .text-cad{
     width: 26vw;
     height: 6vh;
     border-radius: 15px;
     /* border-color: #fff; */
-    background-color: #e4e1e0;
+    background-color: #d7d5d4;
     outline: none;
     /* margin-bottom: 15px; */
     margin-top: 10px;
     border: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
 }
 .text-title{
     font-size: 28px;
