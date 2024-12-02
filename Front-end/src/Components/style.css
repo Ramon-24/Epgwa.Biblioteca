@@ -35,8 +35,61 @@
 }
 .area-button{
     width: 12vw;
-    height: 5vh;
-    margin-top: 400px;
+    height: 6vh;
+    margin-top: 220px;
     border-radius: 20px;
-
+    border-color: #fff;
+    color: #fff;
+    background-color: #3b9140;
+}
+.area-buttons{
+    width: 12vw;
+    height: 6vh;
+    margin-top: 120px;
+    border-radius: 20px;
+    border-color: #333332;
+    color: #333332;
+    /* background-color: #3b9140; */
+}
+.area-text{
+    width: 26vw;
+    height: 6vh;
+    border-radius: 15px;
+    /* border-color: #fff; */
+    background-color: #e4e1e0;
+    outline: none;
+    /* margin-bottom: 15px; */
+    margin-top: 20px;
+    border: 0;
+}
+.text-cad{
+    width: 26vw;
+    height: 6vh;
+    border-radius: 15px;
+    /* border-color: #fff; */
+    background-color: #e4e1e0;
+    outline: none;
+    /* margin-bottom: 15px; */
+    margin-top: 10px;
+    border: 0;
+}
+.text-title{
+    font-size: 28px;
+    margin-top: 95px;
+    margin-bottom: 5px;
+    color: #333332;
+}
+.text-titles{
+    font-size: 28px;
+    margin-top: 135px;
+    margin-bottom: 8px;
+    color: #ecece9;
+}
+.sub-text{
+    font-size: 18px;
+    color: #ecece9;
+}
+.sub-texts{
+    font-size: 18px;
+    color: #333332;
 }
