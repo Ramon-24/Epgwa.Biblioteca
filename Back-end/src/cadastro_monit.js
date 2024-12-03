@@ -34,7 +34,6 @@ mont_router.post("/monitores", (req, res) => {
             }
         })
 
-
         conn.query(`INSERT INTO monitoria (Aluno_id) VALUES ('${alunoId}')`, (err, results) => {
             if(err) {
                 return res.json({

@@ -18,16 +18,16 @@ log_router.post("/login", (req, res) => {
             });
         };
 
-        // if (result.length > 0) {
-        //     return res.json({
-        //         Sucesso: "Usuário encontrado!",
-        //         Dados: result[0] 
-        //     });
-        // } else {
-        //     return res.json({
-        //         Erro: "Usuário não encontrado!"
-        //     });
-        // };
+        if (result.length > 0) {
+            return res.json({
+                Sucesso: "Usuário encontrado!",
+                Dados: result[0] 
+            });
+        } else {
+            return res.json({
+                Erro: "Usuário não encontrado!"
+            });
+        };
 
     });
 });
