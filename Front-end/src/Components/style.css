@@ -9,7 +9,71 @@
     height: 100vh;
     justify-content: space-around;
     align-items: center;
-    background-color: #fbead4;
+    background-color: #3333335f;
+}
+.area-d{
+    /* background-color: #3333332d; */
+    width: 96vw;
+    height: 94vh;
+    margin-left: 2px;
+    border-radius: 6px;
+    /* background-color: #3333333f; */
+    background-color: #fff;
+}
+.guia-principal{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 0;
+    /* margin-top: -2px; */
+    margin-left: -5px;
+    background-color: #3b9140;
+}
+.house{
+    color: #fff;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+.search{
+    color: #3333335f;
+    /* padding-top: 30px; */
+    margin-left: -800px;
+}
+.guia{
+    display: flex;
+    flex-direction: column;
+    margin: 80px 900px 50px 20px;
+    gap: 80px;
+    color: #3b9140;
+}
+.linha{
+    width: 3px;
+    height: 94vh;
+    background-color: #3b9140;
+    margin-top: -555px;
+    margin-left: 74px;
+}
+.categoria{
+    color: #3b9140;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    margin-top: -190px;
+    margin-left: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.text{
+    width: 60vw;
+    height: 4.5vh;
+    border-radius: 15px;
+    margin-left: 85px;
+    background-color: #d7d5d4;
+    outline: none;
+    margin-top: 20px;
+    border: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    z-index: 1;
 }
 .area-cadastro{
     background-color: #3b9140;
