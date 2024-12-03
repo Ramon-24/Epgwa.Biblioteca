@@ -1,0 +1,62 @@
+
+
+.area-button:hover{
+    border-color: #3b9140;
+    color: #3b9140;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+.area-buttons:hover{
+    border-color: #3b9140;
+    color: #3b9140;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+.button:hover{
+    border-color: #3b9140;
+    color: #3b9140;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+
+.area-cadastro{
+    z-index: 1;
+}
+.area-login{
+    animation: troca-login 2s;
+    z-index: 0;
+}
+.area-de-cadastro{
+    animation: troca-cadastro-v 2s;
+    z-index: 1;
+}
+.area-de-login{
+    z-index: 0;
+    animation: troca-cadastro-b 2s;
+}
+
+@keyframes troca-login{
+    0%{
+        margin-left: -2400px;
+    }
+    100%{
+        margin-right: 27px;
+    }
+}
+@keyframes troca-cadastro-v{
+    0%{
+        margin-left: -700px;
+    }
+    100%{
+        margin-left: 280px;
+    }
+}
+@keyframes troca-cadastro-b{
+    0%{
+        margin-left: 280px;
+    }
+    100%{
+        margin-left: -2400px;
+    }
+}

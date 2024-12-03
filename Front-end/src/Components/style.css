@@ -10,9 +10,6 @@
     justify-content: space-around;
     align-items: center;
     background-color: #fbead4;
-    /* border-radius: 20px; */
-    /* margin-left: 25px; */
-    /* margin-bottom: 90px; */
 }
 .area-cadastro{
     background-color: #3b9140;
@@ -23,8 +20,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    animation: troca 3s;
 }
 .area-login{
     background-color: #fff;
@@ -36,7 +31,6 @@
     align-items: center;
 }
 
-
 .area-de-cadastro{
     background-color: #3b9140;
     width: 38vw;
@@ -46,8 +40,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    animation: troca 3s;
 }
 .area-de-login{
     background-color: #fff;
@@ -66,32 +58,37 @@
     border-color: #fff;
     color: #fff;
     background-color: #3b9140;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 .area-buttons{
     width: 12vw;
     height: 6vh;
     margin-top: 120px;
     border-radius: 20px;
-    border-color: #333332;
-    color: #333332;
-    /* background-color: #3b9140; */
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: #3b9140;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 .button{
     width: 12vw;
     height: 6vh;
     margin-top: 20px;
     border-radius: 20px;
-    border-color: #333332;
-    color: #333332;
+    border-color: #fff;
+    color: #fff;
+    background-color: #3b9140;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 .area-text{
     width: 26vw;
     height: 6vh;
     border-radius: 15px;
-    /* border-color: #fff; */
     background-color: #d7d5d4;
     outline: none;
-    /* margin-bottom: 15px; */
     margin-top: 20px;
     border: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -101,32 +98,34 @@
     width: 26vw;
     height: 6vh;
     border-radius: 15px;
-    /* border-color: #fff; */
     background-color: #d7d5d4;
     outline: none;
-    /* margin-bottom: 15px; */
     margin-top: 10px;
     border: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
 }
 .text-title{
-    font-size: 28px;
+    font-size: 32px;
     margin-top: 95px;
     margin-bottom: 5px;
-    color: #333332;
+    color: #3b9140;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .text-titles{
     font-size: 28px;
     margin-top: 135px;
     margin-bottom: 8px;
     color: #ecece9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .sub-text{
-    font-size: 18px;
+    font-size: 17px;
     color: #ecece9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .sub-texts{
     font-size: 18px;
-    color: #333332;
+    color: #3b9140;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

@@ -1,4 +1,5 @@
 import './style.css';
+import './animacion.css';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -17,8 +18,8 @@ export default function Login() {
                     <h4 className='sub-texts'>Faça seu login no site de emprestimos da Ep biblioteca</h4>
                     <input className='area-text' placeholder='Nome' type="text" />
                     <input className='area-text' placeholder='Curso' type="text" />
-                    <input className='area-text' placeholder='Serie' type="text" />
-                    <button className='area-buttons' onClick={()=>navigate('/home')}>Fazer login</button>
+                    <input className='area-text' placeholder='Serie' type="number" />
+                    <button className='area-buttons' onClick={()=>navigate('/home')}>Fazer Login</button>
                 </section>
             </header>
         </div>
