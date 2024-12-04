@@ -117,8 +117,19 @@
 }
 .search{
     color: #3333335f;
-    padding-top: 12px;
+    padding-top: 16px;
     margin-left: -800px;
+    top: 0; /* Alinha ao topo da viewport */
+    left: 0; /* Alinha à esquerda */ 
+    z-index: 10;
+}
+.searchr{
+    color: #3333335f;
+    padding-top: 16px;
+    margin-left: -530px;
+    top: 0; /* Alinha ao topo da viewport */
+    left: 0; /* Alinha à esquerda */ 
+    z-index: 10;
 }
 .guia{
     display: flex;
@@ -131,7 +142,7 @@
     width: 3px;
     height: 94vh;
     background-color: #3b9140;
-    margin-top: -555px;
+    margin-top: -568px;
     margin-left: 74px;
 }
 .text{
@@ -143,6 +154,21 @@
     outline: none;
     margin-top: 20px;
     border: 0;
+    padding-left: 55px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    z-index: 1;
+}
+.min-text{
+    width: 40vw;
+    height: 4.5vh;
+    border-radius: 15px;
+    margin-left: 85px;
+    background-color: #d7d5d4;
+    /* outline: none; */
+    margin-top: 20px;
+    border: 0;
+    padding-left: 55px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     z-index: 1;
@@ -162,6 +188,17 @@
     width: 58vw;
     height: 93vh;
     margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.area-emprestimo{
+    background-color: #63a557;
+    width: 45vw;
+    height: 94vh;
+    margin-left: 700px;
+    margin-top: -602px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;

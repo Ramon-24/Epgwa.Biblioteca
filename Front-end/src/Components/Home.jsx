@@ -12,7 +12,7 @@ export default function Home(){
     return(
         <header className='area-header'>
             <section className="area-d">
-                <input className='text' type="text" />
+                <input className='text' type="text" placeholder='Digite suas pesquisas de livros' />
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
                 <div className='guia'>
                     <div className='guia-principal'>
@@ -27,14 +27,14 @@ export default function Home(){
                     <section className='categoria'>
                         <h1>Livros Populares</h1>
                         <div className='area-livros'>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
+                            <div className='livro'><h1 className="text-livro">Coraline</h1></div>
+                            <div className='livro'><h1 className="text-livro">A biblioteca da meia noite</h1></div>
+                            <div className='livro'><h1 className="text-livro">O jardim secreto</h1></div>
+                            <div className='livro'><h1 className="text-livro">A garota do lago</h1></div>
+                            <div className='livro'><h1 className="text-livro">A arte da guerra</h1></div>
+                            <div className='livro'><h1 className="text-livro">A culpa e das estrelas</h1></div>
+                            <div className='livro'><h1 className="text-livro">Cidade de papel</h1></div>
+                            <div className='livro'><h1 className="text-livro">A cinco passos de você</h1></div>
                         </div>
                     </section>
                     <section className='categoria'>
