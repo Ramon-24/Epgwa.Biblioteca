@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from "express";
 import { cad_router } from "./cadastro_alun.js";
 import { log_router } from "./login.js";
@@ -16,6 +17,11 @@ app.use(mont_router);
 app.use(liv_router);
 app.use(empr_router);
 
+app.use(cors({
+    origin: "http://localhost:5173/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+}));
 
 app.get("/", (req, res) => {
     res.send("O servidor EP Biblioteca, está rodando!")

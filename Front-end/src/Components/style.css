@@ -160,13 +160,13 @@
     margin-top: 8px;
     margin-left: 8px;
 }
-.gear{
+.gears{
     color: #fff;
     margin-top: 8px;
     margin-left: 10px;
     cursor: pointer;
 }
-.gears{
+.gear{
     color: #3b9140;
     margin-top: 8px;
     margin-left: 8px;
@@ -434,4 +434,17 @@
     font-size: 18px;
     color: #3b9140;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+
+.o{
+    color: #3b9140;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 40vw;
+    height: 10vh;
+    /* margin-left: -350px; */
+    margin-right: -400px;
 }

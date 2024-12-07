@@ -25,13 +25,14 @@ export default function (){
                         <div>
                             <h1 className="name-book">A biblioteca da meia noite</h1>
                             <p className='autor'>Matt Haig</p>
+                            <p className='o'>A Biblioteca da Meia-Noite é um romance incrível que fala dos infinitos rumos que a vida pode tomar e da busca incessante pelo rumo certo.</p>
                             <button className='button-emprestimo' onClick={()=>navigate('/emprestimos')}>Cadastrar emprestimo</button>
                         </div>
                     </div>
                     <div className='sinopse'>
                         {/* <h1 className='text-title'>Autor</h1> */}
                         <h1 className='text-title'>Sinopse</h1>
-                        <p className='sub-texts'>A Biblioteca da Meia-Noite traz nos a história de Nora Seed, uma adulta com depressão e pensamentos suicidas. Outrora esteve quase a ser campeã de natação, esteve numa banda e abandonou o possível amor da sua vida. Sente que a sua vida está sem cor e tem vontade de desistir.</p>
+                        <p className='sub-texts'> Aos 35 anos, Nora Seed é uma mulher cheia de talentos e poucas conquistas. Arrependida das escolhas que fez no passado, ela vive se perguntando o que poderia ter acontecido caso tivesse vivido de maneira diferente. Após ser demitida e seu gato ser atropelado, Nora vê pouco sentido em sua existência e decide colocar um ponto final em tudo. Porém, quando se vê na Biblioteca da Meia-Noite, Nora ganha uma oportunidade única de viver todas as vidas que poderia ter vivido.</p>
                     </div>
 
                         <section className='categoria'>

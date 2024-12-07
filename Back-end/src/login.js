@@ -1,4 +1,4 @@
-import { Router } from "express";
+import {Router} from 'express';
 import {conn} from "./bd.js";
 
 const log_router = Router()
