@@ -6,6 +6,7 @@ import Login from './Components/Login'
 import Cadastro from './Components/Cadastro'
 import Home from './Components/Home'
 import Loan from './Components/Loan'
+import Loans from './Components/Loans'
 
 
 createRoot(document.getElementById('root')).render(
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/cad_aluno" element={<Cadastro/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/emprestimos" element={<Loan/>} />
+        <Route path="/emprestimo" element={<Loans/>} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

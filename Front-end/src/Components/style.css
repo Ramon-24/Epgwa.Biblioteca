@@ -42,6 +42,19 @@
     margin-left: 110px;
     margin-top: 100px;
 }
+.caixas{
+    overflow-y: auto; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 45vw; 
+    height: 78vh;
+    z-index: 10;
+    background-color: #b62929;
+    /* background-color: #9b1a1a; */
+    margin-left: 110px;
+    margin-top: 100px;
+}
 
 /* É o nomes dos livros */
 .text-livro{
@@ -74,6 +87,14 @@
     max-height: 30vh;
     background-color: #b4b1b1;
     margin-left: 30px;
+    position: relative;
+}
+.livros{
+    width: 15vw;
+    height: 45vh;
+    background-color: #b4b1b1;
+    margin-left: -250px;
+    margin-top: 30px;
     position: relative;
 }
 
@@ -295,6 +316,30 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     padding-left: 15px;
+}
+
+.area-descricao{
+    display: flex;
+    /* align-items: center; */
+    /* gap: 80px; */
+    justify-content: space-evenly;
+    margin-right: 100px;
+}
+.area-descricoes{
+    display: flex;
+    /* align-items: center; */
+    /* gap: 80px; */
+    justify-content: space-evenly;
+    margin-right: -100px;
+    margin-top: -10px;
+}
+.name-book{
+    font-size: 32px;
+    margin-top: 50px;
+    /* margin-bottom: 5px; */
+    margin-left: -280px;
+    color: #3b9140;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Titulo principal */
