@@ -1,9 +1,26 @@
 import './style.css';
 import './animacion.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 export default function (){
     const navigate = useNavigate();
+    // const [livros, setlivros] = useState([]);
+    // const [data, setData] = useState({ Tombo: "", Nome: "", Autor: "", Ano_publicacao: ""});
+
+    // // Envia os dados do formulário para cadastrar um livro
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         await axios.post('http://localhost:3000/cad_livro', formData);
+    //         alert('Livro cadastrado com sucesso!');
+    //         setFormData({ Tombo: "", Nome: "", Autor: "", Ano_publicacao: "" });
+    //         fetchLivros(); // Atualiza a lista de livros
+    //     } catch (error) {
+    //         alert("Erro ao cadastrar o livro: " + error.response?.data.erro || error.message);
+    //     }
+    // };
 
     return(
         <header className='area-header'>

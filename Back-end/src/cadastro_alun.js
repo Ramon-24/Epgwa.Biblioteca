@@ -3,10 +3,10 @@ import {conn} from "./bd.js";
 
 const cad_router = Router()
 
-// Cadastro do aluno que acabou de entrar na escola 
 cad_router.post("/cad_aluno", (req, res) => {
     const { Nome, Endereco, Telefone, Curso, Ano, Serie } = req.body;
-
+    
+    // Cadastro do aluno que acabou de entrar na escola 
     conn.query(`INSERT INTO alunos (Nome, Endereco, Telefone, Curso, Ano, Serie) 
         values ('${Nome}', '${Endereco}', '${Telefone}', '${Curso}', '${Ano}', '${Serie}')`, (err, result) => {
             if (err) {

@@ -1,33 +1,4 @@
-
-/* .house:hover{
-    background-color: #3b9140;
-    color: #fff;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-}
-.bookmark:hover{
-    background-color: #3b9140;
-    color: #fff;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-}
-.clock:hover{
-    background-color: #3b9140;
-    color: #fff;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-}
-.gear:hover{
-    background-color: #3b9140;
-    color: #fff;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-} */
-
+/* Animações hover */
 .area-button:hover{
     border-color: #3b9140;
     color: #3b9140;
@@ -48,6 +19,7 @@
 }
 
 
+/* Animações com keyframes */
 .area-cadastro{
     z-index: 1;
 }

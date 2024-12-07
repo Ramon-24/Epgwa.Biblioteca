@@ -1,13 +1,29 @@
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import './style.css';
 import './animacion.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Home(){
     const navigate = useNavigate();
-    const livros = [
-        {nome: "Ensaio"},
-        {nome: "Cegueira"}
-    ]
+    const [livros, setlivros] = useState([]);
+    const [data, setData] = useState({ Tombo: "", Nome: "", Autor: "", Ano_publicacao: ""});
+    
+     // Busca os livros
+     const fetchLivros = async () => {
+        try {
+            const response = await axios.get('http://localhost:3000/livros');
+            setLivros(response.data);
+        } catch (error) {
+            alert("Erro ao carregar os livros: " + error.response.data.erro || error.message);
+        }
+    };
+
+    // Carregar os livros
+    useEffect(() => {
+        fetchLivros();
+    }, []);
+    
 
     return(
         <header className='area-header'>
@@ -40,25 +56,23 @@ export default function Home(){
                     <section className='categoria'>
                         <h1>Livros Estrangeiros</h1>
                         <div className='area-livros'>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
+                            {livros.map((livro) => (
+                                <div key={livro.Tombo} className='livro'>
+                                    <h1 className='text-livro'>{livro.Nome}</h1>
+                                    <p>{livro.Autor} ({livro.Ano_publicacao})</p>
+                                </div>
+                            ))}
                         </div>
                     </section>
                     <section className='categoria'>
                         <h1>Livros Brasileiros</h1>
                         <div className='area-livros'>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
-                            <div className='livro'><h1 className="text-livro">livros</h1></div>
+                            {livros.map((livro) => (
+                                <div key={livro.Tombo} className='livro'>
+                                    <h1 className='text-livro'>{livro.Nome}</h1>
+                                    <p>{livro.Autor} ({livro.Ano_publicacao})</p>
+                                </div>
+                            ))}
                         </div>
                     </section>
                 </header>
@@ -66,3 +80,4 @@ export default function Home(){
         </header>
     )
 }
+

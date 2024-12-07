@@ -11,6 +11,7 @@ log_router.post("/login", (req, res) => {
         });
     };
 
+    // Verficação de login, vendo se o nome e o curso e serie, estão no BD
     conn.query(`SELECT * FROM alunos WHERE Nome = '${nome}' AND Curso = '${curso}' AND Serie = '${serie}'`, (err, result) => {
         if (err) {
             return res.json({

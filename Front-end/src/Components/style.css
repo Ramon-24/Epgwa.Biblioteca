@@ -4,6 +4,8 @@
     box-sizing: border-box;
     position: relative;
 }
+
+/* Area principal que aborta toda a página, com um body */
 .area-header{
     display: flex;
     width: 100vw;
@@ -12,37 +14,44 @@
     align-items: center;
     background-color: #3333335f;
 }
+
+/* Aborda toda a area de exibição dos livros existentes na pagina */
 .categoria{
     color: #3b9140;
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: -5px;
     font-size: 25px;
-    /* margin-top: -500px; */
     padding-top: -5000px;
     margin-left: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 20 !important;
     position: relative;
 }
+
+/* A caixa junta meu texto e livros, representado por categoria, area-livros e livros */
 .caixa{
-    overflow-y: auto; /* Permite rolagem vertical caso o conteúdo exceda a altura */
-    position: fixed; /* Mantém o header fixo na tela */
-    top: 0; /* Alinha ao topo da viewport */
-    left: 0; /* Alinha à esquerda */
-    width: 90vw; /* Largura total da viewport */
-    height: 78vh; /* Altura total da viewport */
-    z-index: 10; /* Definindo uma camada base */
+    overflow-y: auto; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 90vw; 
+    height: 78vh;
+    z-index: 10;
     background-color: #ffffff;
     margin-left: 110px;
     margin-top: 100px;
 }
+
+/* É o nomes dos livros */
 .text-livro{
     font-size: 16px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 10px;
     margin-top: 200px;
 }
+
+/* Busca o conjuntos fotos e nomes dos livros */
 .area-livros{
     width: 80vw;
     height: 50vh;
@@ -52,38 +61,27 @@
     padding: 3px;
     gap: 90px;
     overflow-x: scroll;
-    /* background-color: #3b9140; */
-    /* ::-webkit-scrollbar { width: 10px; } */
-    /* overflow-x: hidden; */
-    /* position: fixed; */
     position: relative;
+    /* scrollbar-width: none; */
 }
+::-webkit-scrollbar {
+    display: none; /* Oculta a barra de scroll */
+}
+
+/* Junta nomes dos livros */
 .livro{
     min-width: 10vw;
     max-height: 30vh;
     background-color: #b4b1b1;
     margin-left: 30px;
     position: relative;
-    /* position: fixed; */
 }
-/* .livro:hover{
-    min-width: 12vw;
-    max-height: 35vh;
-}
-.text-livro:hover{
-    font-size: 90px;
-    background-color: aqua;
-    margin-left: 10px;
-    margin-top: 300px;
-} */
 
 .area-d{
-    /* background-color: #3333332d; */
     width: 96vw;
     height: 94vh;
     margin-left: 2px;
     border-radius: 6px;
-    /* background-color: #3333333f; */
     background-color: #fff;
 }
 .guia-principal{
@@ -91,53 +89,68 @@
     height: 50px;
     border-radius: 50%;
     z-index: 0;
-    /* margin-top: -2px; */
-    margin-left: -5px;
+    /* margin-left: -500px; */
     background-color: #3b9140;
 }
+.guia{
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    margin: 80px 900px 50px 15px;
+    gap: 80px;
+    color: #3b9140;
+}
+
+
+/* Icons */
 .house{
     color: #fff;
     margin-top: 8px;
-    margin-left: 8px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 .houser{
     color: #3b9140;
     margin-top: 8px;
     margin-left: 8px;
+    cursor: pointer;
 }
 .bookmark{
     color: #fff;
     margin-top: 8px;
-    margin-left: 8px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 .bookmarkr{
     color: #3b9140;
     margin-top: 8px;
     margin-left: 8px;
+    cursor: pointer;
+}
+.clock{
+    cursor: pointer;
+}
+.gear{
+    cursor: pointer;
 }
 .search{
     color: #3333335f;
     padding-top: 16px;
     margin-left: -800px;
-    top: 0; /* Alinha ao topo da viewport */
-    left: 0; /* Alinha à esquerda */ 
+    top: 0;
+    left: 0; 
     z-index: 10;
 }
 .searchr{
     color: #3333335f;
     padding-top: 16px;
     margin-left: -530px;
-    top: 0; /* Alinha ao topo da viewport */
-    left: 0; /* Alinha à esquerda */ 
+    top: 0;
+    left: 0;
     z-index: 10;
 }
-.guia{
-    display: flex;
-    flex-direction: column;
-    margin: 80px 900px 50px 20px;
-    gap: 80px;
-    color: #3b9140;
-}
+
+/* É a linha que divide a guia e o resto do body */
 .linha{
     width: 3px;
     height: 94vh;
@@ -145,34 +158,9 @@
     margin-top: -568px;
     margin-left: 74px;
 }
-.text{
-    width: 60vw;
-    height: 4.5vh;
-    border-radius: 15px;
-    margin-left: 85px;
-    background-color: #d7d5d4;
-    outline: none;
-    margin-top: 20px;
-    border: 0;
-    padding-left: 55px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-    z-index: 1;
-}
-.min-text{
-    width: 40vw;
-    height: 4.5vh;
-    border-radius: 15px;
-    margin-left: 85px;
-    background-color: #d7d5d4;
-    /* outline: none; */
-    margin-top: 20px;
-    border: 0;
-    padding-left: 55px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-    z-index: 1;
-}
+
+
+/* Areas de delimitação dos form */
 .area-cadastro{
     background-color: #3b9140;
     width: 38vw;
@@ -203,7 +191,6 @@
     flex-direction: column;
     align-items: center;
 }
-
 .area-de-cadastro{
     background-color: #3b9140;
     width: 38vw;
@@ -223,17 +210,19 @@
     flex-direction: column;
     align-items: center;
 }
+
+/* Manipulação dos button */
 .area-button{
     width: 12vw;
     height: 6vh;
     margin-top: 220px;
     border-radius: 20px;
     border-color: #fff;
+    cursor: pointer;
     color: #fff;
     background-color: #3b9140;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 .area-buttons{
     width: 12vw;
     height: 6vh;
@@ -241,10 +230,10 @@
     border-radius: 20px;
     border-color: #ffffff;
     color: #ffffff;
+    cursor: pointer;
     background-color: #3b9140;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 .button{
     width: 12vw;
     height: 6vh;
@@ -253,9 +242,9 @@
     border-color: #fff;
     color: #fff;
     background-color: #3b9140;
+    cursor: pointer;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 .area-text{
     width: 26vw;
     height: 6vh;
@@ -267,6 +256,33 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     padding-left: 15px;
+}
+.text{
+    width: 60vw;
+    height: 4.5vh;
+    border-radius: 15px;
+    margin-left: 85px;
+    background-color: #d7d5d4;
+    outline: none;
+    margin-top: 20px;
+    border: 0;
+    padding-left: 55px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    z-index: 1;
+}
+.min-text{
+    width: 40vw;
+    height: 4.5vh;
+    border-radius: 15px;
+    margin-left: 85px;
+    background-color: #d7d5d4;
+    margin-top: 20px;
+    border: 0;
+    padding-left: 55px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    z-index: 1;
 }
 .text-cad{
     width: 26vw;
@@ -280,6 +296,8 @@
     font-size: 16px;
     padding-left: 15px;
 }
+
+/* Titulo principal */
 .text-title{
     font-size: 32px;
     margin-top: 95px;
@@ -294,6 +312,8 @@
     color: #ecece9;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+/* Sub-titulo */
 .sub-text{
     font-size: 17px;
     color: #ecece9;

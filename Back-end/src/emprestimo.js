@@ -7,47 +7,53 @@ const empr_router = Router();
 empr_router.post("/emprestimos", (req, res) => {
     const { aluno_id, livro_tombo, data_emprestimo, data_devolucao } = req.body;
 
+    // Verificação de campus vazios
     if (aluno_id == " " || livro_tombo == " " || data_emprestimo == " " || data_devolucao == " ") {
         return res.json({
             Erro: "Informe todos os campos obrigatórios!"
         });
     }
 
-
+    // Buscando o FK do aluno, para saber se ele existe
     conn.query(`SELECT Id FROM alunos WHERE Id = '${aluno_id}'`, (err, result) => {
         if (err) {
             return res.json({
-                 Erro: "Erro no BD ao verificar aluno!" + err.message
-                });
+                Erro: "Erro no BD ao verificar aluno!" + err.message
+            });
         }
-
+        
+        // Verifica a quantidade de caracteres encontrados no "array" do BD
         if (result.length === 0) {
             return res.json({ 
                 Erro: "Aluno não encontrado!" 
             });
         }
-
-
+        
+        
+        // Pega os dados da FK de aluno, e busca na tabela emprestimos e manda um status
         conn.query(`SELECT * FROM emprestimos WHERE Aluno_id = '${aluno_id}' AND Status = 'Emprestado'`, (err, result) => {
             if (err) {
                 return res.json({ 
                     Erro: "Erro no banco de dados ao verificar empréstimos!" + err.message
                 });
             }
-
+            
+            // Verifica a quantidade de caracteres encontrados no "array" do BD
             if (result.length > 0) {
                 return res.json({
                     Erro: "Este aluno já possui um empréstimo ativo!"
                 });
             }
-
+            
+            // Pega os dados do input, e busca na tabela emprestimos e manda um status
             conn.query(`SELECT * FROM emprestimos WHERE Livro_tombo = '${livro_tombo}' AND Status = 'Emprestado'`, (err, result) => {
                 if (err) {
                     return res.json({ 
                         Erro: "Erro no banco de dados ao verificar status do livro!" + err.message
                     });
                 }
-
+                
+                // Verifica a quantidade de caracteres encontrados no "array" do BD
                 if (result.length > 0) {
                     return res.json({
                         Erro: "Este livro já está emprestado!"
@@ -55,6 +61,7 @@ empr_router.post("/emprestimos", (req, res) => {
                 }
 
 
+                // Adiciona os registos de forma completa ao banco de dados 
                 const status = "Emprestado";
                 conn.query(`INSERT INTO emprestimos (Aluno_id, Livro_tombo, Data_emprestimo, Data_devolucao, Status)
                     VALUES ('${aluno_id}', '${livro_tombo}', '${data_emprestimo}', '${data_devolucao}', '${status}')`,(err, result) => {

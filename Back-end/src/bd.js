@@ -3,10 +3,11 @@ import mysql from "mysql";
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "", //.
-    database: "Ep_boblioteca" //.
+    password: "", //Não tenho
+    database: "Ep_boblioteca" //escrevi biblioteca de forma errada
 });
 
+// verifica se a conexão esta bem sucedida
 conn.connect((err) => {
     if(err){
         console.log("Ocorreu erros na conexão ao BD", err);

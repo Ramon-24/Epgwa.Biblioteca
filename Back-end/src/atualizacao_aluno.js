@@ -4,7 +4,7 @@ import {conn} from "./bd.js";
 
 const put_router = Router()
 
-
+// Busca os dados do usuario
 put_router.get("/atualizar_serie", (req, res) => {
     conn.query('SELECT Id, Serie, Ano FROM alunos', (err, result) => {
         if(err) {
@@ -12,8 +12,8 @@ put_router.get("/atualizar_serie", (req, res) => {
                 Erro: "Erro ao buscar alunos " + err.message
             });
         };
-        // res.json(result)
         
+        // Encontra o ano atual,no sistema
         const ano_atual = getYear(new Date());
         const promises = [];
         
@@ -33,7 +33,7 @@ put_router.get("/atualizar_serie", (req, res) => {
                 );
 
                 // Deletar de alunos que não podem ser monitores por estarem na 3 serie
-                // Perguntar pro professor se pode reutilizar a rota
+                // Perguntar pro professor se pode reutilizar a rota (pode sim)
             } else if (registro.serie === 3) {
                 promises.push(new Promise((resol, reject) => {
                         conn.query(`DELETE FROM momitores WHERE Id = '${registro.id}'`, (err, result) => {
@@ -52,6 +52,8 @@ put_router.get("/atualizar_serie", (req, res) => {
                 const diferenca = ano_atual - registro.Ano;
                 const nova_serie = registro.Serie  + diferenca;
                 
+
+                // Passando os novos dados para o banco de dados
                 promises.push(new Promise((resol, reject) => {
                         conn.query(`UPDATE alunos SET Serie = '${nova_serie}', Ano = '${ano_atual}' WHERE Id = '${registro.id}'`, (err, result) => {
                             if(err) {
@@ -66,6 +68,8 @@ put_router.get("/atualizar_serie", (req, res) => {
             
         });
 
+        // Promise é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona
+        // allSettled retorna uma promessa que é resolvida após todas as promessas dadas serem resolvidas ou rejeitadas
         Promise.allSettled(promises)
             .then((results) => {
                 const respostas = results.map((resultado) =>
