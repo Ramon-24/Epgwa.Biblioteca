@@ -50,7 +50,7 @@
     width: 45vw; 
     height: 78vh;
     z-index: 10;
-    background-color: #b62929;
+    background-color: #ffffff;
     /* background-color: #9b1a1a; */
     margin-left: 110px;
     margin-top: 100px;
@@ -148,10 +148,28 @@
     margin-left: 8px;
     cursor: pointer;
 }
+.clocks{
+    cursor: pointer;
+    color: #fff;
+    margin-top: 8px;
+    margin-left: 10px;
+}
 .clock{
     cursor: pointer;
+    color: #3b9140;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 .gear{
+    color: #fff;
+    margin-top: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.gears{
+    color: #3b9140;
+    margin-top: 8px;
+    margin-left: 8px;
     cursor: pointer;
 }
 .search{
@@ -330,8 +348,17 @@
     /* align-items: center; */
     /* gap: 80px; */
     justify-content: space-evenly;
-    margin-right: -100px;
+    margin-right: -300px;
     margin-top: -10px;
+}
+.name-books{
+    width: 30vw;
+    font-size: 32px;
+    margin-top: 50px;
+    /* margin-bottom: 5px; */
+    margin-left: -240px;
+    color: #3b9140;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .name-book{
     font-size: 32px;
@@ -340,6 +367,45 @@
     margin-left: -280px;
     color: #3b9140;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.autores{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: -230px;
+    color: #3b9140;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.autor{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: -258px;
+    color: #3b9140;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.sinopse{
+    width: 70vw;
+    height: 26vh;
+    margin-left: 100px;
+}
+.min-sinopse{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 50vh;
+    margin-left: 20px;
+    gap: 10px;
+}
+.button-emprestimo{
+    width: 12vw;
+    height: 6vh;
+    margin-top: 60px;
+    margin-left: -260px;
+    border-radius: 20px;
+    border-color: #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #3b9140;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Titulo principal */

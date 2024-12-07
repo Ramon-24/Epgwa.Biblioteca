@@ -7,6 +7,8 @@ import Cadastro from './Components/Cadastro'
 import Home from './Components/Home'
 import Loan from './Components/Loan'
 import Loans from './Components/Loans'
+import Atrasos from './Components/Atrasos'
+import Configuracao from './Components/Configuracao'
 
 
 createRoot(document.getElementById('root')).render(
@@ -19,6 +21,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/home" element={<Home/>} />
         <Route path="/emprestimos" element={<Loan/>} />
         <Route path="/emprestimo" element={<Loans/>} />
+        <Route path="/atraso" element={<Atrasos/>} />
+        <Route path="/config" element={<Configuracao/>} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

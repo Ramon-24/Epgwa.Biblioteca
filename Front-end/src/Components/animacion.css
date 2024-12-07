@@ -19,6 +19,14 @@
 }
 
 
+.button-emprestimo:hover{
+    border-color: #3b9140;
+    color: #3b9140;
+    background-color: #fff;
+}
+
+
+
 /* Animações com keyframes */
 .area-cadastro{
     z-index: 1;
@@ -26,16 +34,43 @@
 .area-login{
     animation: troca-login 2s;
     z-index: 0;
+    animation-timing-function: ease-out;
 }
 .area-de-cadastro{
     animation: troca-cadastro-v 2s;
+    animation-timing-function: ease-out;
     z-index: 1;
 }
 .area-de-login{
     z-index: 0;
     animation: troca-cadastro-b 2s;
+    animation-timing-function: ease-out;
 }
 
+
+.area-emprestimo{
+    animation: troca-cadastro-v 1s;
+    animation-timing-function: cubic-bezier(0.4, 0.5, 0.5, 0.5);
+    z-index: 1;
+}
+.caixas{
+    z-index: 0;
+    animation-name: troca-caixa;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+.name-books{
+    animation-name: troca-name-book;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    }
+.min-sinopse{
+    animation-name: troca-autor;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+/* Animação das trocas de cadastro para login e vise versa */
 @keyframes troca-login{
     0%{
         margin-left: -2400px;
@@ -58,5 +93,39 @@
     }
     100%{
         margin-left: -2400px;
+    }
+}
+
+/* Animação da troca de escolha do livro, para a de cadastro do emprestimo */
+@keyframes troca-caixa{
+    0%{
+        width: 90vw;
+    }
+    100%{
+        width: 45vw; 
+    }
+}
+@keyframes troca-name-book{
+    0%{
+        margin-left: -280px;
+    }
+    100%{
+        margin-left: -240px;
+        
+    }
+}
+@keyframes troca-autor{
+    0%{
+        width: 70vw;
+        height: 26vh;
+        margin-left: 100px;
+    }
+    100%{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        height: 50vh;
+        margin-left: 20px;
+        gap: 10px;
     }
 }
