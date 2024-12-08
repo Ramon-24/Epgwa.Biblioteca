@@ -1,4 +1,4 @@
-import cors from 'cors';
+import cors from "cors";
 import express from "express";
 import { cad_router } from "./cadastro_alun.js";
 import { log_router } from "./login.js";
@@ -9,6 +9,16 @@ import { empr_router } from "./emprestimo.js";
 
 
 const app = express();
+
+
+// Configuração do middleware CORS antes dos roteadores
+app.use(cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
+
 app.use(express.json());
 app.use(cad_router);
 app.use(log_router);
@@ -17,11 +27,6 @@ app.use(mont_router);
 app.use(liv_router);
 app.use(empr_router);
 
-app.use(cors({
-    origin: "http://localhost:5173/",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
-}));
 
 app.get("/", (req, res) => {
     res.send("O servidor EP Biblioteca, está rodando!")

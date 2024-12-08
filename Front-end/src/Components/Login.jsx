@@ -29,7 +29,7 @@ export default function Login() {
                 { nome, curso, serie}, { headers: { "Content-Type": "application/json" }});
 
             if (response.data.Sucesso) {
-                alert(`Seja brm-vindo '${nome}'!`)
+                alert(`Seja bem-vindo '${nome}'!`)
                 navigate('/home');
             } else {
                 alert(response.data.Erro);
