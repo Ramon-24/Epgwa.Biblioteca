@@ -62,7 +62,8 @@ CREATE TABLE `livros` (
   `Tombo` int(11) NOT NULL,
   `Nome` varchar(60) NOT NULL,
   `Autor` varchar(50) NOT NULL,
-  `Ano_publicacao` int(11) DEFAULT NULL
+  `Ano_publicacao` int(11) DEFAULT NULL,
+  `Sinopse` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------

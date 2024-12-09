@@ -5,11 +5,11 @@ const liv_router = Router()
 
 // Precisa da foto do livro como .png (não foi colocada por dica do professor)
 liv_router.post("/cad_livro", (req, res) => {
-    const { Tombo, Nome, Autor, Ano_publicacao } = req.body;
+    const { Tombo, Nome, Autor, Ano_publicacao, Sinopse } = req.body;
 
     // Utilizando os dados imformados no body, para inserir um novo livro
-    conn.query(`INSERT INTO livros (Tombo, Nome, Autor, Ano_publicacao)
-        values ('${Tombo}', '${Nome}', '${Autor}', '${Ano_publicacao}')`, (err, result) => {
+    conn.query(`INSERT INTO livros (Tombo, Nome, Autor, Ano_publicacao, Sinopse)
+        values ('${Tombo}', '${Nome}', '${Autor}', '${Ano_publicacao}', '${Sinopse}')`, (err, result) => {
             if(err){
                 return res.json({
                     Erro: "Não foi possivel fazer o cadastro do livro" + err.message

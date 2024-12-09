@@ -84,15 +84,15 @@
         margin-left: -700px;
     }
     100%{
-        margin-left: 280px;
+        margin-left: 250px;
     }
 }
 @keyframes troca-cadastro-b{
     0%{
-        margin-left: 280px;
+        margin-left: 250px;
     }
     100%{
-        margin-left: -2400px;
+        margin-left: -2100px;
     }
 }
 

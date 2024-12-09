@@ -35,7 +35,7 @@
     position: fixed;
     top: 0; 
     left: 0;
-    width: 90vw; 
+    width: 86vw; 
     height: 78vh;
     z-index: 10;
     background-color: #ffffff;
@@ -117,7 +117,7 @@
     display: flex;
     flex-direction: column;
     align-items:baseline;
-    margin: 80px 900px 50px 15px;
+    margin: 40px 9000px 50px 12px;
     gap: 80px;
     color: #3b9140;
 }
@@ -173,9 +173,9 @@
     cursor: pointer;
 }
 .search{
-    color: #3333335f;
+    color: #1302025f;
     padding-top: 16px;
-    margin-left: -800px;
+    margin-left: -730px;
     top: 0;
     left: 0; 
     z-index: 10;
@@ -183,7 +183,7 @@
 .searchr{
     color: #3333335f;
     padding-top: 16px;
-    margin-left: -530px;
+    margin-left: -480px;
     top: 0;
     left: 0;
     z-index: 10;
@@ -194,7 +194,7 @@
     width: 3px;
     height: 94vh;
     background-color: #3b9140;
-    margin-top: -568px;
+    margin-top: -540px;
     margin-left: 74px;
 }
 
@@ -235,7 +235,7 @@
     width: 38vw;
     height: 93vh;
     border-radius: 10px;
-    margin-left: 280px;
+    margin-left: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,7 +244,7 @@
     background-color: #fff;
     width: 58vw;
     height: 93vh;
-    margin-left: -2400px;
+    margin-left: -2100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -338,15 +338,11 @@
 
 .area-descricao{
     display: flex;
-    /* align-items: center; */
-    /* gap: 80px; */
     justify-content: space-evenly;
     margin-right: 100px;
 }
 .area-descricoes{
     display: flex;
-    /* align-items: center; */
-    /* gap: 80px; */
     justify-content: space-evenly;
     margin-right: -300px;
     margin-top: -10px;
@@ -355,7 +351,6 @@
     width: 30vw;
     font-size: 32px;
     margin-top: 50px;
-    /* margin-bottom: 5px; */
     margin-left: -240px;
     color: #3b9140;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -363,7 +358,6 @@
 .name-book{
     font-size: 32px;
     margin-top: 50px;
-    /* margin-bottom: 5px; */
     margin-left: -280px;
     color: #3b9140;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -382,9 +376,17 @@
     color: #3b9140;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.o{
+    color: #3b9140;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 40vw;
+    height: 10vh;
+    margin-right: -400px;
+}
 .sinopse{
     width: 70vw;
-    height: 26vh;
+    height: 35vh;
     margin-left: 100px;
 }
 .min-sinopse{
@@ -437,14 +439,70 @@
 }
 
 
-
-
-.o{
+/* Telas em andamento */
+.config{
+    margin-top: -490px;
+    margin-left: 300px;
     color: #3b9140;
-    font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
-    width: 40vw;
-    height: 10vh;
-    /* margin-left: -350px; */
-    margin-right: -400px;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.min-dados{
+    padding: 20px;
+    color: #ffffff;
+    background-color: #3b913fe8;
+    border-radius: 10px;
+    margin-left: -300px;
+    font-size: 15px;
+    min-width: 20vw;
+    min-height: 20vh;
+} 
+.min-caixa{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    overflow-y: auto; 
+    position: fixed;
+    top: 0; 
+    width: 80vw; 
+    height: 74vh;
+    z-index: 10;
+    margin-left: -70px;
+    margin-top: 126px;
+}
+.livro-fantasma{
+    font-size: 0;
+}
+
+.min-dados:hover{
+    padding: 20px;
+    color: #ffffff;
+    background-color: #3b9140;
+    margin-left: 200px;
+    border-radius: 10px;
+    font-size: 15px;
+    min-width: 50vw;
+    min-height: 40vh;
+} 
+.livro-fantasma:hover{
+    font-size: 15px;
+    width: 15vw;
+    height: 45vh;
+    background-color: #b4b1b1;
+    margin-left: -250px;
+    margin-top: 30px;
+    position: relative;
+}
+
+
+
+
+.inputCad-livros{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 60vw;
+    margin-top: -560px;
+    margin-left: 300px;
 }

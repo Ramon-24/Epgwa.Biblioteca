@@ -6,21 +6,22 @@ import { useState, useEffect } from 'react';
 
 export default function (){
     const navigate = useNavigate();
-    // const [livros, setlivros] = useState([]);
-    // const [data, setData] = useState({ Tombo: "", Nome: "", Autor: "", Ano_publicacao: ""});
 
-    // // Envia os dados do formulário para cadastrar um livro
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         await axios.post('http://localhost:3000/cad_livro', formData);
-    //         alert('Livro cadastrado com sucesso!');
-    //         setFormData({ Tombo: "", Nome: "", Autor: "", Ano_publicacao: "" });
-    //         fetchLivros(); // Atualiza a lista de livros
-    //     } catch (error) {
-    //         alert("Erro ao cadastrar o livro: " + error.response?.data.erro || error.message);
-    //     }
-    // };
+    const [livros, setlivros] = useState([]);
+     // Busca os livros
+     const fetchLivros = async () => {
+        try {
+            const response = await axios.get('http://localhost:3000/livros');
+            setlivros(response.data);
+        } catch (error) {
+            alert("Erro ao carregar os livros: " + (error.response?.data?.erro || error.message));
+        }
+    };
+
+    // Carregar os livros
+    useEffect(() => {
+        fetchLivros();
+    }, []);
 
     return(
         <header className='area-header'>
@@ -52,14 +53,11 @@ export default function (){
                         <section className='categoria'>
                         <h1>Semelhantes</h1>
                         <div className='area-livros'>
-                            <div className='livro'><h1 className="text-livro">Coraline</h1></div>
-                            <div className='livro'><h1 className="text-livro">A biblioteca da meia noite</h1></div>
-                            <div className='livro'><h1 className="text-livro">O jardim secreto</h1></div>
-                            <div className='livro'><h1 className="text-livro">A garota do lago</h1></div>
-                            <div className='livro'><h1 className="text-livro">A arte da guerra</h1></div>
-                            <div className='livro'><h1 className="text-livro">A culpa e das estrelas</h1></div>
-                            <div className='livro'><h1 className="text-livro">Cidade de papel</h1></div>
-                            <div className='livro'><h1 className="text-livro">A cinco passos de você</h1></div>
+                            {livros.slice(0, 8).map((livro) => (
+                                <div key={livro.Tombo} className='livro'>
+                                    <h1 className='text-livro'>{livro.Nome}</h1>
+                                </div>
+                            ))}
                         </div>
                     </section>
                 </header>

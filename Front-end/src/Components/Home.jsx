@@ -7,18 +7,14 @@ import { useNavigate, useLocation } from 'react-router-dom';
 export default function Home(){
     const navigate = useNavigate();
     const [livros, setlivros] = useState([]);
-    const [data, setData] = useState({ Tombo: "", Nome: "", Autor: "", Ano_publicacao: "",});
-    
-    const location =useLocation();
-    const nomeLivro = location.state?.nomeLivro
 
      // Busca os livros
      const fetchLivros = async () => {
         try {
             const response = await axios.get('http://localhost:3000/livros');
-            setLivros(response.data);
+            setlivros(response.data);
         } catch (error) {
-            alert("Erro ao carregar os livros: " + error.response.data.erro || error.message);
+            alert("Erro ao carregar os livros: " + (error.response?.data?.erro || error.message));
         }
     };
 
@@ -59,10 +55,9 @@ export default function Home(){
                     <section className='categoria'>
                         <h1>Livros Estrangeiros</h1>
                         <div className='area-livros'>
-                            {livros.map((livro) => (
-                                <div key={livro.Tombo} className='livro' onClick={() => navigate('/emprestimos', {state: {nomeLivro: livro.Nome}})}>
+                            {livros.slice(0, 8).map((livro) => (
+                                <div key={livro.Tombo} className='livro'>
                                     <h1 className='text-livro'>{livro.Nome}</h1>
-                                    {/* <p>{livro.Autor} ({livro.Ano_publicacao})</p> */}
                                 </div>
                             ))}
                         </div>
@@ -70,10 +65,9 @@ export default function Home(){
                     <section className='categoria'>
                         <h1>Livros Brasileiros</h1>
                         <div className='area-livros'>
-                            {livros.map((livro) => (
+                            {livros.slice(0, 8).map((livro) => (
                                 <div key={livro.Tombo} className='livro'>
                                     <h1 className='text-livro'>{livro.Nome}</h1>
-                                    <p>{livro.Autor} ({livro.Ano_publicacao})</p>
                                 </div>
                             ))}
                         </div>

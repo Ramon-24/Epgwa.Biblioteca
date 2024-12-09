@@ -1,14 +1,50 @@
 import './style.css';
 import './animacion.css';
 import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
+import axios from 'axios';
 
-export default function (){
+export default function Configuracao (){
+    const inputTombo = useRef();
+    const inputNome = useRef();
+    const inputAutor = useRef();
+    const inputAno_publicacao = useRef();
+    const inputSinopse = useRef();
+
     const navigate = useNavigate();
+
+    const cadastra_livros = async () => {
+        const Tombo = inputTombo.current.value.trim();
+        const Nome = inputNome.current.value.trim();
+        const Autor = inputAutor.current.value.trim();
+        const Ano_publicacao = inputAno_publicacao.current.value.trim();
+        const Sinopse = inputSinopse.current.value.trim();
+
+        if (!Tombo || !Nome || !Autor || !Ano_publicacao || !Sinopse) {
+            return;
+            alert("Preencha os campus!");
+        }
+        try{
+            const response = await axios.post('http://localhost:3000/cad_livro', {
+                Tombo, Nome, Autor, Ano_publicacao, Sinopse
+            });
+
+            if (response.data.Erro) {
+                alert(response.data.Erro);
+            } else {
+                alert("Livro cadastrado com sucesso!");
+                navigate('/home');
+            }
+        }catch (err) {
+            console.error("Erro no cadastro do livro", err);
+            alert("Erro ao conectar ao servidor!")
+        };
+    };
 
     return(
         <header className='area-header'>
             <section className="area-d">
-                <input className='min-text' type="text" placeholder='Digite suas pesquisas de livros' />
+                <input className='min-text' type="text" placeholder='Digite suas pesquisas de livros' /> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="searchr" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
                 <div className='guia'>
                     <svg onClick={()=>navigate('/home')} xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="houser" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/></svg>
@@ -21,11 +57,19 @@ export default function (){
                 <div className='linha'></div>
 
 
+                <main className='inputCad-livros'>
+                    <h1 className='text-title'>Cadastre os livros</h1>
+                    {/* <h4 className='sub-texts'>Faça o cadastro no site de emprestimos da Ep biblioteca</h4> */}
+                    <input className='text-cad' placeholder='Tombo' type="number" ref={inputTombo} />
+                    <input className='text-cad' placeholder='Nome da obra' type="text" ref={inputNome} />
+                    <input className='text-cad' placeholder='Autor da obra' type='text' ref={inputAutor} />
+                    <input className='text-cad' placeholder='Ano de publicação' type="number" ref={inputAno_publicacao} />
+                    <input className='text-cad' placeholder='Sinopse' type="text" ref={inputSinopse} />
+                    <button className='button' onClick={cadastra_livros} >Cadastrar</button>
+                </main>
 
 
-
-
-            </section>
+            </section>  
         </header>
     )
 }
