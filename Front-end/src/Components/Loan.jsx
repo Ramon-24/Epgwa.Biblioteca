@@ -53,7 +53,7 @@ export default function (){
                         <section className='categoria'>
                         <h1>Semelhantes</h1>
                         <div className='area-livros'>
-                            {livros.slice(0, 8).map((livro) => (
+                            {livros.slice(0, 15).map((livro) => (
                                 <div key={livro.Tombo} className='livro'>
                                     <h1 className='text-livro'>{livro.Nome}</h1>
                                 </div>
@@ -67,7 +67,7 @@ export default function (){
                     <input className='area-text' placeholder='Tombo' type="text" />
                     <input className='area-text' placeholder='Data de emprestimo' type="date"/>
                     <input className='area-text' placeholder='Data  de devolução' type="date"/>
-                    <button className='area-buttons'>Emprestar</button>
+                    <button className='buttons-emprestimo'>Emprestar</button>
                 </div>
             </section>
         </header>

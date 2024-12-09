@@ -223,8 +223,8 @@
     background-color: #63a557;
     width: 45vw;
     height: 94vh;
-    margin-left: 700px;
-    margin-top: -602px;
+    margin-left: 635px;
+    margin-top: -548px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -348,10 +348,10 @@
     margin-top: -10px;
 }
 .name-books{
-    width: 30vw;
+    width: 20vw;
     font-size: 32px;
     margin-top: 50px;
-    margin-left: -240px;
+    margin-left: -268px;
     color: #3b9140;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -368,6 +368,17 @@
     margin-left: -230px;
     color: #3b9140;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.buttons-emprestimo{
+    width: 12vw;
+    height: 6vh;
+    margin-top: 50px;
+    border-radius: 20px;
+    border-color: #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #3b9140;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .autor{
     font-size: 20px;

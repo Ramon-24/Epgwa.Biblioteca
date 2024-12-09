@@ -55,7 +55,7 @@ export default function Home(){
                     <section className='categoria'>
                         <h1>Livros Estrangeiros</h1>
                         <div className='area-livros'>
-                            {livros.slice(0, 8).map((livro) => (
+                            {livros.slice(0, 10).map((livro) => (
                                 <div key={livro.Tombo} className='livro'>
                                     <h1 className='text-livro'>{livro.Nome}</h1>
                                 </div>
