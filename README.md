@@ -55,7 +55,7 @@ Além disso, utilizamos requisições HTTP para comunicação entre o frontend e
 
 ```bash
 # Clone o repositório
-$ git clone https://github.com/seu-usuario/epgwa-biblioteca
+$ git clone https://github.com/Ramon-24/Epgwa.Biblioteca.git
 
 # Acesse a pasta do projeto
 $ cd epgwa-biblioteca
