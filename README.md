@@ -58,22 +58,22 @@ Além disso, utilizamos requisições HTTP para comunicação entre o frontend e
 $ git clone https://github.com/Ramon-24/Epgwa.Biblioteca.git
 
 # Acesse a pasta do projeto
-$ cd epgwa-biblioteca
+$ cd Epgwa.Biblioteca
 
-# Instale as dependências (frontend)
-$ cd frontend
-$ npm install
-
-# Instale as dependências (backend)
-$ cd ../backend
+# Instale as dependências do backend
+$ cd Back-end
 $ npm install
 
 # Inicie o backend
 $ npm run dev
 
-# Em outro terminal, inicie o frontend
-$ cd ../frontend
+# Em outro terminal, acesse o frontend
+$ cd ../Front-end
+$ npm install
+
+# Inicie o frontend
 $ npm start
+
 ```
 
 > 📢 **Dica:** Antes de iniciar o projeto, certifique-se de configurar corretamente o acesso ao banco MySQL no backend.
