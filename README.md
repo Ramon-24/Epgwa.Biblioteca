@@ -23,11 +23,11 @@ A ideia e o design foram definidos em conjunto: eu participei tanto do desenvolv
 
 ## 🚀 Funcionalidades
 
-- 📚 Cadastro de livros com título, autor e categoria;
-- 🔍 Filtro de livros por nome e tipo;
-- 🗑️ Remoção de registros com confirmação;
-- 📱 Layout responsivo, acessível por computador e celular;
-- 💾 Integração com banco de dados MySQL para armazenamento dos dados.
+* 📚 Cadastro de livros com título, autor e categoria;
+* 🔍 Filtro de livros por nome e tipo;
+* 🗑️ Remoção de registros com confirmação;
+* 📱 Layout responsivo, acessível por computador e celular;
+* 📀 Integração com banco de dados MySQL para armazenamento dos dados.
 
 ---
 
@@ -35,9 +35,9 @@ A ideia e o design foram definidos em conjunto: eu participei tanto do desenvolv
 
 O projeto foi dividido entre frontend e backend, com a seguinte estrutura:
 
-- **Frontend:** React.js + CSS puro;
-- **Backend:** Node.js + Express;
-- **Banco de Dados:** MySQL;
+* **Frontend:** React.js + CSS puro;
+* **Backend:** Node.js + Express;
+* **Banco de Dados:** MySQL;
 
 Além disso, utilizamos requisições HTTP para comunicação entre o frontend e backend, com rotas REST criadas para cadastrar, remover e listar livros no banco de dados.
 
@@ -76,18 +76,19 @@ $ cd ../frontend
 $ npm start
 ```
 
-Certifique-se de configurar corretamente o acesso ao banco MySQL no backend antes de iniciar o projeto.
+> 📢 **Dica:** Antes de iniciar o projeto, certifique-se de configurar corretamente o acesso ao banco MySQL no backend.
 
 ---
 
-## 👨‍💻 Participação
+## 👨‍💼 Participação
 
 Este projeto foi feito em parceria, com divisão equilibrada de tarefas:
 
-- **Eu:** Desenvolvimento completo da lógica, integração com o banco de dados, e parte do layout;
-- **Colega:** Contribuições no design e ajustes visuais.
+* **Eu:** Desenvolvimento completo da lógica, integração com o banco de dados, e parte do layout;
+* **Colega:** Contribuições no design e ajustes visuais.
 
 ---
+
 
 ## 🌐 Contato e Links
 
@@ -106,5 +107,3 @@ Este projeto foi feito em parceria, com divisão equilibrada de tarefas:
 <p align="center">
   📩 <strong>Email:</strong> ramonbrandao.dev@gmail.com
 </p>
-
----
